@@ -6,8 +6,64 @@
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
-    <button class="test" onclick="btn()">Testing</button>
+    <div class="container">
+    <section class="info">
+        <div>
+            <p id="p1">Player One: <span id="res1">0</span></p>
+            <p id="p2">Player Two: <span id="res2">0</span></p>
+            <p id="tie">Tie: <span id="restie">0</span></p>
+        </div>
+    </section>
 
+    <section class="game-board">
+        <div class="first">
+            <div id="cell-1">
+                <h3 about="0"></h3>
+
+            </div>
+            <div id="cell-2">
+                <h3 about="1"></h3>
+            </div>
+            <div id="cell-3">
+                <h3 about="2"></h3>
+            </div>
+        </div>
+
+        <div class="second">
+            <div id="cell-4">
+                <h3 about="3"></h3>
+            </div>
+            <div id="cell-5">
+                <h3 about="4"></h3>
+            </div>
+            <div id="cell-6">
+                <h3 about="5"></h3>
+            </div>
+        </div>
+
+        <div class="third">
+            <div id="cell-7" >
+                <h3 about="6"></h3>
+            </div>
+            <div id="cell-8">
+                <h3 about="7"></h3>
+            </div>
+            <div id="cell-9">
+                <h3 about="8"></h3>
+
+            </div>
+
+        </div>
+
+    </section>
+    </div>
+    <div class="lower">
+        <section>
+            <button id="reset">Restart The Game</button>
+        </section>
+    </div>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/process.js"></script>
 </body>
 </html>
