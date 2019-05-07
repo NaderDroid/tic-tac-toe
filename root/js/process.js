@@ -2,12 +2,25 @@ let letter = null;
 let input = [];
 let winner = false;
 
-$('#x').on('click', function () {
-    letter = true;
-});
-$('#o').on('click', function () {
-    letter = false;
-});
+const chooseSide = function () {
+    $('#x').on('click', function () {
+        letter = true;
+    });
+    $('#o').on('click', function () {
+        letter = false;
+    });
+};
+
+
+// const hvr = function () {
+//     $('.container div').on( 'mouseover',function(e) {
+//         $(e.target).append('<span style="position: fixed">Hello</span>');
+//         $(e.target).on('mouseleave' , function() {
+//             $(e.target).children('span').remove()
+//         })
+//     })
+// };
+// $('.game-board').on('mouseenter' , hvr);
 
 const checkWinner = function () {
     if (input[0] !== undefined) {
@@ -58,8 +71,6 @@ const checkWinner = function () {
             winner = true;
         }
     }
-
-
 };
 
 const move = function (e) {
@@ -85,12 +96,11 @@ const move = function (e) {
                 parseInt($(e.target).children('h3').attr('about'));
                 input[num] = 'o';
                 checkWinner();
-            } else {
-                alert('Invalid space');
             }
         }
-    } else {
-        alert('Game Over, Buddy');
+    }
+    else {
+        alert('Game over');
     }
 };
 
@@ -99,6 +109,3 @@ const resetGame = function () {
 };
 $('#reset').on('click', resetGame);
 $('.game-board').on('click', move);
-
-
-
