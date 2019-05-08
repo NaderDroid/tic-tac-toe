@@ -3,6 +3,7 @@ let input = [];
 let winner = false;
 let p1 = 0;
 let p2 = 0;
+let tie = 0;
 let tieCounter = 0;
 
 const chooseSide = function () {
@@ -89,8 +90,9 @@ const checkWinner = function () {
         }
     }
      if (tieCounter === 9 && winner !== true) {
-        console.log('There is a tie here');
-    }
+         tie++;
+         $('#restie').text(tie);
+     }
 };
 
 const move = function (e) {
