@@ -6,25 +6,6 @@ let p2 = 0;
 let tie = 0;
 let tieCounter = 0;
 
-const chooseSide = function () {
-    $('#x').on('click', function () {
-        letter = true;
-    });
-    $('#o').on('click', function () {
-        letter = false;
-    });
-};
-
-
-// const hvr = function () {
-//     $('.container div').on( 'mouseover',function(e) {
-//         $(e.target).append('<span style="position: fixed">Hello</span>');
-//         $(e.target).on('mouseleave' , function() {
-//             $(e.target).children('span').remove()
-//         })
-//     })
-// };
-// $('.game-board').on('mouseenter' , hvr);
 const showWinner = function (c1,c2,c3 , winner) {
     $(c1).addClass('winner');
     $(c2).addClass('winner');
@@ -109,7 +90,8 @@ const move = function (e) {
                 tieCounter++;
                 checkWinner();
             } else {
-                alert('Invalid space');
+                swal('Invalid' , 'Spot is already taken');
+
             }
         } else if (letter !== true) {
             if ($(e.target).children('h3').val() === '') {
@@ -140,10 +122,9 @@ const resetBoard = function () {
 $('.game-board').on('click', move);
 $('#reset').on('click' , resetBoard);
 $('.pc').on('click' , function() {
-    window.location.href = 'index.html';
+    swal('This feature will be available in the next iteration');
 });
 $('.two-players').on('click' , function() {
-    console.log('This is two player mode');
     window.location.href = 'index.html';
 });
 
