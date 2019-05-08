@@ -128,6 +128,7 @@ h2 {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 33px;
     color: #2b3252;
+    cursor: pointer;
 }
 
 .intro section {
@@ -187,7 +188,56 @@ p {
     color: #fad744;
 }
 
-.two-players img {
-    background-size: 110px 30px;
+.pc , .two-players {
+    cursor: pointer;
+    border: 3px solid #2b3252;
+    margin: 10px 0;
 }
+
+@media only screen and (max-width: 600px) {
+    body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .container {
+        /*height: 500px;*/
+        padding: 20px;
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /*justify-content: space-evenly;*/
+        height: 100vh;
+    }
+
+    .info {
+        width: 100%;
+        height: 100px;
+        background-color: #2b3252;
+        color: #fad744;
+        border-radius: 12px;
+        margin: 0px auto 40px auto;
+
+    }
+
+    .info div {
+        padding: 13px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .info p {
+        font-size: 15px;
+    }
+    .lower {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+    }
+    }
+
 
