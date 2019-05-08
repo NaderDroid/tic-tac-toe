@@ -3,7 +3,6 @@ let input = [];
 let winner = false;
 let p1 = 0;
 let p2 = 0;
-let tie = 0;
 let tieCounter = 0;
 
 const chooseSide = function () {
@@ -105,7 +104,7 @@ const move = function (e) {
                 parseInt($(e.target).children('h3').attr('about'));
                 input[num] = 'x';
                 letter = false;
-                tiecounter++;
+                tieCounter++;
                 checkWinner();
             } else {
                 alert('Invalid space');
@@ -117,7 +116,7 @@ const move = function (e) {
                 let num = $(e.target).children('h3').attr('about');
                 parseInt($(e.target).children('h3').attr('about'));
                 input[num] = 'o';
-                tiecounter++;
+                tieCounter++;
                 checkWinner();
             }
         }
@@ -138,7 +137,11 @@ const resetBoard = function () {
 };
 $('.game-board').on('click', move);
 $('#reset').on('click' , resetBoard);
-$('img').on('click' , function() {
-    console.log('Nader is here again');
+$('.pc').on('click' , function() {
+    window.location.href = 'index.html';
+});
+$('.two-players').on('click' , function() {
+    console.log('This is two player mode');
+    window.location.href = 'index.html';
 });
 
