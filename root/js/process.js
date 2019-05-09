@@ -120,7 +120,10 @@ const resetBoard = function () {
 
 };
 $('.game-board').on('click', move);
-$('#reset').on('click' , resetBoard);
+$('#next').on('click' , resetBoard);
+$('#reset').on('click' , function() {
+    window.location.href = 'index.html';
+});
 $('.pc').on('click' , function() {
     swal('This feature will be available in the next iteration');
 });
