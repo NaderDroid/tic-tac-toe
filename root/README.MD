@@ -1,4 +1,4 @@
-https://naderdroid.github.io/tic-tac-toe/root/intro.html
+[Access the game here](https://naderdroid.github.io/tic-tac-toe/root/intro.html)
 
 # Project Title
 
