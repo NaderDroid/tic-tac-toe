@@ -124,11 +124,16 @@ h2 {
     justify-content: center;
 }
 
+.lower section {
+
+}
+
 .lower a {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 33px;
     color: #2b3252;
     cursor: pointer;
+    margin: 0 40px;
 }
 
 .intro section {
@@ -190,8 +195,12 @@ p {
 
 .pc , .two-players {
     cursor: pointer;
-    border: 3px solid #2b3252;
     margin: 10px 0;
+}
+
+.pc {
+    border-bottom: 10px solid #2b3252;
+    margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -237,6 +246,18 @@ p {
         left: 0;
         width: 100%;
         margin: 0;
+    }
+
+    .lower a {
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size: 23px;
+        color: #2b3252;
+        cursor: pointer;
+        margin: 0 20px;
+    }
+
+    .lower a:nth-child(2) {
+        margin: 0 0;
     }
     }
 
